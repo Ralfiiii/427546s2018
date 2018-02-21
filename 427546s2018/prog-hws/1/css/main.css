@@ -1,0 +1,65 @@
+.wrap{
+    width: 100%;
+    height: 706px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #B7FDFF, #fff);
+}
+
+.outer{
+    margin: 0 auto;
+    width: 800px;
+    min-height: 200px;
+}
+
+.roller{
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+}
+.titleAssign01{
+    text-align: center;
+    font-size: 20px;
+}
+
+.buttons{
+    width: 600px;
+    margin: 10px auto;
+}
+
+.buttons > button{
+    width: 96px;
+    margin-bottom: 8px;
+}
+
+.lineDisplay ,.circleDisplay, .elliDisplay, .rectDisplay,.polygonDisplay , .polylineDisplay{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.lineDisplay > li > input, .elliDisplay > li > input, .polygonDisplay > li > input, .polylineDisplay > li > input{
+    width: 110px;
+}
+
+#lineCanvas, #cirCanvas, #elliCanvas, #rectCanvas, #polygonCanvas, #polylineCanvas{
+    display: block;
+    margin: 10px auto;
+    background-color: #fff;
+}
+
+.circleDisplay > li > input{
+    width: 125px;
+}
+
+.rectDateName{
+    width: 120px;
+}
+
+.rectDisplay > li > input{
+    width: 142px;
+}
+.btm{
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+}

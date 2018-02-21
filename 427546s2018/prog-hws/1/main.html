@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Ruifeng Liu" content="">
+        <title>Document</title>
+        <script type = "text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+    </head>
+    <body>
+
+        <div class="wrap">
+            <div class="outer">
+                <h1 class="titleAssign01 mt10 mb10">Assignment 01</h1>
+
+                <marquee class='roller'>Please pick what you want to draw on first!</marquee>
+                <marquee class='roller'>The canvas size is 500*500.</marquee>
+                 <p class="buttons">
+                    <button class="inline-block line">line</button>
+                    <button class="inline-block circle">circle</button>
+                    <button class="inline-block ellipse">ellipse</button>
+                    <button class="inline-block rectangles">rectangles</button>
+                    <button class="inline-block polygons">polygons</button>
+                    <button class="inline-block polylines">polylines</button>
+                    <button class="inline-block clean" >clean</button>
+                </p>
+                <div class="linebox">
+
+                    <canvas id = 'lineCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="circleBox">
+                    <canvas id = 'cirCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="elliBox">
+                    <canvas id = 'elliCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="rectBox">
+
+                    <canvas id = 'rectCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="polygonBox">
+
+                    <canvas id = 'polygonCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="polylineBox">
+
+                    <canvas id = 'polylineCanvas' width="500px" height="500px"></canvas>
+                </div>
+
+                <div class="rubberbandBox">
+                    <p>You can use your mouse to draw lines on the canvas!</p>
+                    <canvas id = 'rubberbandCanvas' width="500px" height="500px"></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type = "text/javascript" src="./js/main.js"></script>
+</html>
