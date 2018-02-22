@@ -181,26 +181,26 @@ $(function() {
         var b = Math.ceil(a*0.5);
 
         var a2 = a*a, b2 = b*b, fa2 = 4*a2, fb2 = 4*b2;
-        var x = 0, y = b, sigma = 2*b2 + a2* (1-2*b);
+        var x = 0, y = b, Sigma = 2*b2 + a2* (1-2*b);
 
         while(b2*x <= a2*y){
             drawElli(cnt,centerX,centerY,x,y);
-            if (sigma >=0){
-                sigma += fa2*(1-y);
+            if (Sigma >=0){
+                Sigma += fa2*(1-y);
                 y-=1;
             }
-            sigma += b2*(4*x+6);
+            Sigma += b2*(4*x+6);
             x+=1;
         }
 
-        x = a; y = 0; sigma = 2*a2 + b2* (1-2*a);
+        x = a; y = 0; Sigma = 2*a2 + b2* (1-2*a);
         while(a2*y < b2*x){
             drawElli(cnt,centerX,centerY,x,y);
-            if (sigma >=0){
-                sigma += fb2*(1-x);
+            if (Sigma >=0){
+                Sigma += fb2*(1-x);
                 x-=1;
             }
-            sigma += a2*(4*y+6);
+            Sigma += a2*(4*y+6);
             y+=1;
         }
     }
