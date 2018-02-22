@@ -1,0 +1,1 @@
+I download jQuery from website directly, then I used it to simplify my code.
