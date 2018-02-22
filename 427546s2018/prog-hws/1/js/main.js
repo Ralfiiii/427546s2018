@@ -15,9 +15,6 @@ $(function() {
         myImageData.data[0]=255;
         myImageData.data[1]=0;
         myImageData.data[2]=0;
-        // myImageData.data[0]=parseInt(Math.random()*255+1);
-        // myImageData.data[1]=parseInt(Math.random()*255+1);
-        // myImageData.data[2]=parseInt(Math.random()*255+1);
         myImageData.data[3]=255;
         cnt.putImageData(myImageData, point_x, point_y);
     };
@@ -63,7 +60,6 @@ $(function() {
             mousedown = true;
             posArr.push(canvPos(lineCas, e).x);
             posArr.push(canvPos(lineCas, e).y);
-
         });
 
         lineCas.addEventListener('mousemove',function(e){
@@ -82,7 +78,6 @@ $(function() {
             mousedown = false;
         });
      })
-
 
     function cleanLine(){
         lineCnt.clearRect(0,0,lineCas.width,lineCas.height);
@@ -315,28 +310,28 @@ $(function() {
             posArr.push(x,y);
         }else{
             cleanAll();
-            var ptx = posArr[0];
-            var pty = posArr[1];
+            var Ox = posArr[0];
+            var Oy = posArr[1];
             for (var i = 2; i+1 < posArr.length; i += 2) {
-                DrawLine(pgCnt, ptx,pty,posArr[i],posArr[i+1]);
-                ptx = posArr[i];
-                pty = posArr[i+1];
+                DrawLine(pgCnt, Ox,Oy,posArr[i],posArr[i+1]);
+                Ox = posArr[i];
+                Oy = posArr[i+1];
             }
-            DrawLine(pgCnt,ptx,pty,x,y);
+            DrawLine(pgCnt,Ox,Oy,x,y);
         }
     }
 
     function pgdrag(x,y){
         cleanAll();
 
-        var ptx = posArr[0];
-        var pty = posArr[1];
+        var Ox = posArr[0];
+        var Oy = posArr[1];
         for (var i = 2; i+1 < posArr.length; i += 2) {
-            DrawLine(pgCnt, ptx,pty,posArr[i],posArr[i+1]);
-            ptx = posArr[i];
-            pty = posArr[i+1];
+            DrawLine(pgCnt, Ox,Oy,posArr[i],posArr[i+1]);
+            Ox = posArr[i];
+            Oy = posArr[i+1];
         }
-        DrawLine(pgCnt,ptx,pty,x,y);
+        DrawLine(pgCnt,Ox,Oy,x,y);
 
     }
 
@@ -386,28 +381,28 @@ $(function() {
             posArr.push(x,y);
         }else{
             cleanAll();
-            var ptx = posArr[0];
-            var pty = posArr[1];
+            var Ox = posArr[0];
+            var Oy = posArr[1];
             for (var i = 2; i+1 < posArr.length; i += 2) {
-                DrawLine(plCnt, ptx,pty,posArr[i],posArr[i+1]);
-                ptx = posArr[i];
-                pty = posArr[i+1];
+                DrawLine(plCnt, Ox,Oy,posArr[i],posArr[i+1]);
+                Ox = posArr[i];
+                Oy = posArr[i+1];
             }
-            DrawLine(plCnt,ptx,pty,x,y);
+            DrawLine(plCnt,Ox,Oy,x,y);
         }
     }
 
     function drag(x,y){
         cleanAll();
 
-        var ptx = posArr[0];
-        var pty = posArr[1];
+        var Ox = posArr[0];
+        var Oy = posArr[1];
         for (var i = 2; i+1 < posArr.length; i += 2) {
-            DrawLine(plCnt, ptx,pty,posArr[i],posArr[i+1]);
-            ptx = posArr[i];
-            pty = posArr[i+1];
+            DrawLine(plCnt, Ox,Oy,posArr[i],posArr[i+1]);
+            Ox = posArr[i];
+            Oy = posArr[i+1];
         }
-        DrawLine(plCnt,ptx,pty,x,y);
+        DrawLine(plCnt,Ox,Oy,x,y);
 
     }
 
