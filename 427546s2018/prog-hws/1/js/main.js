@@ -393,7 +393,7 @@ $(function() {
     }
 
     function drag(x,y){
-        cleanAll();
+       cleanAll();
 
         var Ox = posArr[0];
         var Oy = posArr[1];
@@ -456,4 +456,3 @@ $(function() {
     })
 
 })
-
