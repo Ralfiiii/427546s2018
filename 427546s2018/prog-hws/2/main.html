@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Ruifeng Liu" content="Homework2">
+        <title>Document</title>
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.min.css">
+
+    </head>
+    <body>
+
+        <div class="wrap">
+            <div class="outer">
+                <h1 class="titleAssign01 mt10 mb10">Assignment 02</h1>
+
+                <marquee class='roller'>Please pick which question you want to see first!</marquee>
+                <marquee class='roller'>Name: Ruifeng Liu    ID: 01709023</marquee>
+
+                <p class="buttons">
+                    <button class="inline-block Q01 blueBtn">Question 01</button>
+                    <button class="inline-block Q21 blueBtn">Question 02.1</button>
+                    <button class="inline-block Q22 blueBtn">Question 02.2</button>
+                    <button class="inline-block Q23 blueBtn">Question 02.3</button>
+                </p>
+
+                <div class="question01_display">
+                    <canvas id = 'canvas01' width="500px" height="500px"></canvas>
+                    <div>
+                        <span class="fcName mb10">Primitive:</span>
+                        <select name="fractal" id="fractal" class="mb10">
+                            <option value="line">Line</option>
+                            <option value="circle" >Arc(Circle+Ellipse)</option>
+                            <option value="rectangle">Rectangle</option>
+                            <option value="polygon">Polygon</option>
+                            <option value="polyline">Polyline</option>
+                        </select>
+                        <br/>
+                        <span class="fcName ">Ratio:</span><span>1/</span><input type="text" class="fcR ml5">
+                        <button class="subR blueBtn">submitRatio</button>
+                        <span class="fcName ml35 ">Iterations:</span><input type="text" class="fcI ml5">
+                        <button class="subI blueBtn">submitIteration</button>
+                        <ul class="wheel mt10 mb10">
+                            <li class="whOption30"><span class="whOpName">Red:</span><input class="red01" type="range" min = '0' max = '255'></li>
+                            <li class="whOption30"><span class="whOpName">Green:</span><input class="green01" type="range" min = '0' max = '255'></li>
+                            <li class="whOption30"><span class="whOpName">Blue:</span><input class='blue01' type="range" min = '0' max = '255'></li>
+                            <li class="whOption30"><span class="whOpName">width:</span><input class='lineWidth01' type="range" min = '1' max = '5'></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="question02_1_display">
+                        <canvas id = 'canvas02_1' width="500px" height="500px"></canvas>
+
+                </div>
+
+                <div class="question02_2_display">
+                        <canvas id = 'canvas02_2' width="500px" height="500px"></canvas>
+                </div>
+
+
+                <div class="question02_3_display">
+                    <canvas id = 'canvas02_3' width="500px" height="500px"></canvas>
+                    <ul class="wheel mt5">
+                        <li class="whOption50"><span class="whOpName">Radius:</span><input type="text" class="whR"></li>
+                        <li class="whOption50"><span class="whOpName">Score:</span><input type="text" class="whS"></li>
+                        <li class="whOption10"><button class="Q23submit blueBtn">submit</button></li>
+                        <li class="whOption30"><span class="whOpName">Red:</span><input class="red" type="range" min = '0' max = '255'></li>
+                        <li class="whOption30"><span class="whOpName">Green:</span><input class="green" type="range" min = '0' max = '255'></li>
+                        <li class="whOption30"><span class="whOpName">Blue:</span><input class='blue' type="range" min = '0' max = '255'></li>
+                        <li class="whOption30"><span class="whOpName">width:</span><input class='lineWidth' type="range" min = '1' max = '5'></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type = "text/javascript" src="./js/main.min.js"></script>
+</html>
