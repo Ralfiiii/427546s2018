@@ -1,0 +1,32 @@
+.svgBox{
+    width: 860px;
+    margin: 0 auto;
+}
+
+.ctrl{
+    width: 300px;
+    height: 630px;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+
+.optList{
+    width: 260px;
+}
+
+.optList>li{
+    margin:8px 0 8px 5px;
+}
+
+.opName{
+    display: inline-block;
+    width: 84px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sizeCtl{
+    width: 400px;
+    height: 300px;
+    z-index: -1;
+}
