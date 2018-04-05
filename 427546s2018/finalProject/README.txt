@@ -1,6 +1,4 @@
-I'vd drawn three 2D "elevations" (front, top, side) of "my dream house".
-You can use control table on the left to change it.
-
-The right-bottom is where I will draw the projection in the future.
-
-I use jQuery and Three as the plug-ins to help me simplfy the code.
+The plug-ins I use are jQuery + Three.js. Both of them can simplify my code.
+In this update, I finished the 3D transformation.
+Create texture and mapping on the Box-object.
+You can use Control Table on the left hand side to change the shape of the house on the right.
