@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Ruifeng Liu" content="">
+        <title>Document</title>
+        <script type = "text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+        <script type = "text/javascript" src="./js/three.min.js"></script>
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/main.min.css">
+
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="outer clearfix">
+                <h1 class="titleAssign01 mt10 mb10">Final Project</h1>
+                <marquee class="roller">Name: Ruifeng Liu. ID: 01709023. Ruifeng_Liu@student.uml.edu</marquee>
+                <div class="mb10"><p>Generate different projections of the objects: <a href="subHtml/projection.html" class="sel_btn">projections</a></p></div>
+                <div class="ctrl dib fl">
+                    <ul class="optList">
+                            <li><span class="opName">Translate-X:</span><input type="range" value = '0' class="transX" min='-100' max = '100'></li>
+                            <li><span class="opName">Translate-Y:</span><input type="range" value = '0' class="transY" min='-100' max = '100'></li>
+                            <li><span class="opName">Rotate:</span><input type="range" value = '0' class="RoatateSVG" min='-180' max = '180'></li>
+                            <li><span class="opName">Scale-X:</span><input type="range" value = '1' step="0.1" class="ScaleXSVG" min='0' max = '2'></li>
+                            <li><span class="opName">Scale-Y:</span><input type="range" value = '1' step="0.1" class="ScaleYSVG" min='0' max = '2'></li>
+                            <li><span class="opName">SHear-X:</span><input type="range" value = '0' class="SHearXSVG" min='0' max = '360'></li>
+                            <li><span class="opName">SHear-Y:</span><input type="range" value = '0' class="SHearYSVG" min='0' max = '360'></li>
+                            <br/>
+                            <li><span class="opName">3DRotate-X:</span><input type="range" value = '0' class="3DRotateX" min='0' max = '360'></li>
+                            <li><span class="opName">3DRotate-Y:</span><input type="range" value = '0' class="3DRotateY" min='0' max = '360'></li>
+                            <li><span class="opName">3DRotate-Z:</span><input type="range" value = '0' class="3DRotateZ" min='0' max = '360'></li>
+                            <li><span class="opName">3DTranslate-X:</span><input type="range" value = '0' class="3DTranslateX" min='-100' max = '300'></li>
+                            <li><span class="opName">3DTranslate-Y:</span><input type="range" value = '0' class="3DTranslateY" min='-100' max = '300'></li>
+                            <li><span class="opName">3DTranslate-Z:</span><input type="range" value = '0' class="3DTranslateZ" min='-100' max = '300'></li>
+                            <li><span class="opName">3DScale-X:</span><input type="range" value = '10' class="3DScaleX" min='1' max = '30'></li>
+                            <li><span class="opName">3DScale-Y:</span><input type="range" value = '10' class="3DScaleY" min='1' max = '30'></li>
+                            <li><span class="opName">3DScale-Z:</span><input type="range" value = '10' class="3DScaleZ" min='1' max = '30'></li>
+                            <!-- <li><span class="opName">3DShear-YX:</span><input type="range" value = '0' class="3DShear-YX shCtrl" min='0' max = '3'></li>
+                            <li><span class="opName">3DShear-ZX:</span><input type="range" value = '0' class="3DShear-ZX shCtrl" min='0' max = '3'></li> -->
+                            <li><span class="opName">3DShear-XY:</span><input type="range" value = '0' class="3DShear-XY shCtrl" min='0' max = '3'></li>
+                            <!-- <li><span class="opName">3DShear-ZY:</span><input type="range" value = '0' class="3DShear-ZY shCtrl" min='0' max = '3'></li>
+                            <li><span class="opName">3DShear-XZ:</span><input type="range" value = '0' class="3DShear-XZ shCtrl" min='0' max = '3'></li>
+                            <li><span class="opName">3DShear-YZ:</span><input type="range" value = '0' class="3DShear-YZ shCtrl" min='0' max = '3'></li> -->
+
+                            <li><span class="opName">3DLight:</span><input type="range" value = '1' class="3DLight" min='1' max = '5'></li>
+                            <li><span class="opName">Ani-Rotation:</span> <button class="aniCtrlRotation aniCtrl blue ">ON</button> </li>
+                            <li><span class="opName">Ani-Camera:</span> <button class="aniCtrlCamera aniCtrl red">OFF</button> </li>
+
+                    </ul>
+                </div>
+                <div class="svgBox clearfix dib">
+                    <div class="sizeCtl mt10 mr30 fl">
+                        <!-- FONT -->
+                        <!-- <img src="./img/front.svg" alt="" width="400"/> -->
+                        <svg id = 'front' width = '400' height = '300' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                           <!-- background -->
+                           <rect x = '0' y = '0' width = '400' height = '300' style='stroke-width:1px;fill:rgb(192, 192, 192);stroke:rgb(0,0,0)' />
+
+                           <!-- ceilling -->
+                           <rect width="400" height="10" x="0" y="30" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <ellipse cx="20" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="40" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="60" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="80" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="100" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="120" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="140" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="160" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="180" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="200" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="220" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="240" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="260" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="280" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="300" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="320" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="340" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="360" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                           <ellipse cx="380" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+
+                           <!-- 2nd floor Window 1-->
+
+                           <rect width="100" height="80" x="25" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="100" height="10" x="25" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="35" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="75" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <!--Window 2-->
+                           <rect width="100" height="80" x="150" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="100" height="10" x="150" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="160" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="200" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <!--Window 3-->
+                           <rect width="100" height="80" x="280" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="100" height="10" x="280" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="290" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="40" height="50" x="330" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+
+                           <!-- Door -->
+                           <rect width="400" height="10" x="0" y="160" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="90" height="120" x="75" y="180" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="100" height="10" x="70" y="180" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <rect width="80" height="100" x="80" y="195" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+
+                           <!-- Garage -->
+                           <rect width="150" height="120" x="200" y="180" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                           <circle cx="150" cy="250" r="5" stroke="black" stroke-width="2" fill=""/>
+                           <text x="225" y="230" style = 'fill:rgb(237,87,54); font-weight:bold; font-size: 12'>Garage No Block</text>
+
+                        </svg>
+                    </div>
+                    <div class="sizeCtl mt10 fl">
+                        <!-- SIDE -->
+                        <!-- <img src="./img/side.svg" alt="" width="300"/> -->
+                        <svg id = 'side' width = '300' height = '300' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                             <!-- background -->
+                            <rect x = '0' y = '0' width = '300' height = '300' style='stroke-width:1px;fill:rgb(192, 192, 192);stroke:rgb(0,0,0)' />
+
+                            <!-- ceilling -->
+                            <rect width="300" height="10" x="0" y="30" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <ellipse cx="20" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="40" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="60" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="80" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="100" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="120" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="140" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="160" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="180" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="200" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="220" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="240" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="260" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+                            <ellipse cx="280" cy="15" rx="4" ry="8" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1"/>
+
+                            <!-- 2nd floor Window 1-->
+                            <rect width="100" height="80" x="25" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="100" height="10" x="25" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="35" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="75" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <!--Window 2-->
+                            <rect width="100" height="80" x="170" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="100" height="10" x="170" y="60" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="180" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="220" y="80" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+
+                            <!-- 1st floor -->
+                            <rect width="300" height="10" x="0" y="160" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="100" height="80" x="100" y="200" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="100" height="10" x="100" y="200" style="stroke-width:1px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="110" y="220" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+                            <rect width="40" height="50" x="150" y="220" style="stroke-width:4px;fill:rgb(255,255,255);stroke:rgb(0,0,0);"></rect>
+
+                        </svg>
+                    </div>
+                    <div class="sizeCtl mt20 mr30 fl">
+                        <!-- TOP -->
+                        <!-- <img src="./img/top.svg" alt="" width="400"/> -->
+                        <svg id='top' width="400" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <rect width="400" height="300" x="0" y="0" style="stroke-width:1px;fill:rgb(192, 192, 192);stroke:rgb(0,0,0);"></rect>
+                            <rect width="370" height="270" x="15" y="15" style="stroke-width:1px;fill:rgb(225,225,225);stroke:rgb(0,0,0);"></rect>
+                        </svg>
+                    </div>
+                    <div id = "cav" class="sizeCtl mt20 fl">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popOut"><div class="popClose"></div><p class="popText"></p></div>
+
+    </body>
+    <script type = "text/javascript" src="./js/modeling.min.js"></script>
+    <script type = "text/javascript" src="./js/main.min.js"></script>
+
+</html>

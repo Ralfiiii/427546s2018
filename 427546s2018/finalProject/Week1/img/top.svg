@@ -1,0 +1,4 @@
+<svg id='top' width="400" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <rect width="400" height="300" x="0" y="0" style="stroke-width:1px;fill:rgb(192, 192, 192);stroke:rgb(0,0,0);"></rect>
+    <rect width="370" height="270" x="15" y="15" style="stroke-width:1px;fill:rgb(225,225,225);stroke:rgb(0,0,0);"></rect>
+</svg>
